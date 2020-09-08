@@ -6,7 +6,7 @@
 
 <ul class="catalog">
 	<% @products.each do |product| %>
-	<li>
+	<li class="<%= cycle('list_line_odd', 'list_line_even') %>">
 		<%= image_tag(product.image_url) %>
 		<h2><%= product.title %></h2>
 		<p>

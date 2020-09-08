@@ -18,60 +18,63 @@ body {
 	padding: 0;
 }
 header.main{
-	text-align: center;
-	@media (min-width: 30em) {
-		text-align: left;
-	}
+	text-align: center;	
 	background: #282;
 	margin: 0;
-	h1 {
-		display: none;
-	}
+}
+header.main h1 {
+	display: none;
 }
 .content {
-margin: 0;
-padding: 0;
-display: flex;
-display: -webkit-flex;
-flex-direction: column; // mobile is horizontally laid out
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
-@media (min-width: 30em) {
-flex-direction: row; // desktop is vertically laid out
--webkit-box-orient: horizontal;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column; 
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
 }
 nav {
-padding-bottom: 1em;
-background: #141;
-text-align: center; // mobile has centered nav
-@media (min-width: 30em) {
-text-align: left; // desktop nav is left-aligned
-padding: 1em; // and needs more padding
+	padding-bottom: 1em;
+	background: #141;
+	text-align: center; 		
 }
-ul {
-list-style: none;
-margin: 0;
-padding: 0;
-@media (min-width: 30em) {
-padding-right: 1em; // give desktop some extra space
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;			
 }
-li {
-margin: 0;
-padding: 0.5em;
-text-transform: uppercase;
-letter-spacing: 0.354em;
-a {
-color: #bfb;
-text-decoration: none;
+nav ul li {
+	margin: 0;
+	padding: 0.5em;
+	text-transform: uppercase;
+	letter-spacing: 0.354em;				
 }
-a:hover {
-background: none;
-color: white;
+nav ul li a {
+	color: #bfb;
+	text-decoration: none;
 }
-}
-}
+nav ul li a:hover {
+	background: none;
+	color: white;
 }
 main {
-padding: 0.5em;
+	padding: 0.5em;
 }
+
+@media (min-width: 30em) {
+	header.main {
+		text-align: left;
+	}
+	.content {
+		flex-direction: row; 
+		-webkit-box-orient: horizontal;
+	}
+	nav {
+		text-align: left; 
+		padding: 1em;
+	}
+	nav ul {
+		padding-right: 1em; 
+	}
 }

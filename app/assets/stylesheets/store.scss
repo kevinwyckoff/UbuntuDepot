@@ -8,7 +8,10 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		li {
+		li.list_line_odd {
+			background-color: #effeef;
+		}
+		li {			
 			padding: 1em;
 			margin: 0;
 			border-bottom: solid thin #ddd;
